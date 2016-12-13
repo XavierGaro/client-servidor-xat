@@ -1,0 +1,8 @@
+{
+  "name": "exemple-web-sockets",
+  "version": "0.0.1",
+  "description": "Exemple de Xat amb Express i Socket.io",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
