@@ -18,12 +18,12 @@ app.get('/js/:fitxer', function(peticio, resposta){
 
 // Gestió de les connexions
 io.on('connection', function(socol){
-    socol.broadcast.emit('missatge xat', 'Un nou usuari s\'ha connectat');
+    socol.broadcast.emit('missatge estat', 'Un nou usuari s\'ha connectat');
 
     console.log('Un usuari connectat');
 
     socol.on('disconnect', function(){
-        socol.broadcast.emit('missatge xat', 'Un usuari s\'ha desconnectat');
+        socol.broadcast.emit('missatge estat', 'Un usuari s\'ha desconnectat');
         console.log('usuari desconnectat');
     });
 
