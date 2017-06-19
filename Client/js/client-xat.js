@@ -8,10 +8,15 @@ var AplicacioXat = function () {
     });
 
     socol.on('missatge_xat', function(msg){
-        $('#missatges').append($('<li>').text(msg));
+        afegirMissatge(msg);
     });
 
     socol.on('missatge_estat', function(msg){
-        $('#missatges').append($('<li class="estat">').text(msg));
+        afegirMissatge(msg, true);
     });
+    
+    afegirMissatge = function (msg, esEstat) {
+        var className = esEstat ? "estat" : "";
+        $('#missatges').append($('<li class='+ className + '>').text(msg));
+    };
 };
